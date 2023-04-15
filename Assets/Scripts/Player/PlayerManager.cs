@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerManager : StateMachine
 {
     [SerializeField] public Rigidbody2D PlayerRigid;
-    [SerializeField] public float MoveSpeed;
-    [SerializeField] public float DashSpeed;
+    [SerializeField] public float MoveSpeed = 5f;
+    [SerializeField] public float DashSpeed = 15f;
+    [SerializeField] public float SmoothValue = 10f;
 
     private void Awake()
     {

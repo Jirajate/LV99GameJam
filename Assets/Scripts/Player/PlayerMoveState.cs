@@ -39,7 +39,6 @@ public class PlayerMoveState : State
     private void MovePlayer(StateMachine _stateMachine)
     {
         var _playerManager = _stateMachine as PlayerManager;
-        _playerManager.PlayerRigid.velocity = moveVector * _playerManager.MoveSpeed;
-        Debug.Log(_playerManager.PlayerRigid.velocity);
+        _playerManager.PlayerRigid.velocity = Vector3.Lerp(_playerManager.PlayerRigid.velocity, moveVector * _playerManager.MoveSpeed, Time.deltaTime * _playerManager.SmoothValue);
     }
 }
