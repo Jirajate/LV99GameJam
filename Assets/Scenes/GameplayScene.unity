@@ -300,7 +300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerRigid: {fileID: 1280411629}
   MoveSpeed: 5
-  DashSpeed: 10
+  DashSpeed: 15
+  SmoothValue: 20
 --- !u!1 &416512691
 GameObject:
   m_ObjectHideFlags: 0
