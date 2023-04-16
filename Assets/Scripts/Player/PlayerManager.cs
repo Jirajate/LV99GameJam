@@ -15,8 +15,15 @@ public class PlayerManager : StateMachine
     {
         AddState(typeof(PlayerMoveState), new PlayerMoveState());
         AddState(typeof(PlayerDashState), new PlayerDashState());
+        AddState(typeof(PlayerDeadState), new PlayerDeadState());
         Init();
+    }
+
+    public override void Init()
+    {
+        base.Init();
         SwitchToState(typeof(PlayerMoveState));
+        SoundManager.Instance.PlayGameplayBGM();
     }
 
     private void Update()
@@ -24,8 +31,8 @@ public class PlayerManager : StateMachine
         currentState.OnUpdate();
     }
 
-    private void OnCollisionEnter2D(Collision2D _other)
+    private void OnTriggerEnter2D(Collider2D _other)
     {
-        currentState.OnCollisionEnter(_other);
+        currentState.OnTriggerEnter2D(_other);
     }
 }

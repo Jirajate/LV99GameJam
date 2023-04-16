@@ -24,7 +24,7 @@ public abstract class State
 
     }
 
-    public virtual void OnCollisionEnter(Collision2D _other)
+    public virtual void OnTriggerEnter2D(Collider2D _other)
     {
 
     }

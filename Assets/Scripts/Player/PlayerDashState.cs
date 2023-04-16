@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using DG.Tweening;
 
 public class PlayerDashState : State
 {
@@ -30,6 +29,7 @@ public class PlayerDashState : State
     public override void OnExit()
     {
         base.OnExit();
+        InputManager.Instance.Inputs.Player.Dash.performed -= OnDashPerformed;
     }
 
     private void OnDashPerformed(InputAction.CallbackContext _value)

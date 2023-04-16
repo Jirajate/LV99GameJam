@@ -7,7 +7,7 @@ public class PlayerMoveState : State
 {
     private PlayerManager playerManager;
     private Vector2 moveVector;
-    private Quaternion targetRotation;
+    private Quaternion targetRotation = Quaternion.identity;
 
     public override void Init(StateMachine _stateMachine)
     {
@@ -33,6 +33,11 @@ public class PlayerMoveState : State
     {
         base.OnExit();
         playerManager.PlayerRigid.velocity = Vector2.zero;
+    }
+
+    public override void OnTriggerEnter2D(Collider2D _other)
+    {
+        playerManager.SwitchToState(typeof(PlayerDeadState));
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext _value)
