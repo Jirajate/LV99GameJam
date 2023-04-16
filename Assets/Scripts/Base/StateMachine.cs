@@ -24,8 +24,9 @@ public class StateMachine : MonoBehaviour
 
     public virtual void SwitchToState(Type _type)
     {
+        if(currentState != null) currentState.OnExit();
         SetCurrentState(_type);
-        currentState.OnEnter(this);
+        currentState.OnEnter();
     }
 
     private void SetCurrentState(Type _type)
