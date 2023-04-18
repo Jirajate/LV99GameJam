@@ -16,7 +16,7 @@ public class SceneLoader : Singleton<SceneLoader>
         LoadScene("MainMenu");
     }
 
-    public void LoadGameplayScene(string _sceneName)
+    public void LoadGameplayScene()
     {
         LoadScene("GameplayScene");
     }

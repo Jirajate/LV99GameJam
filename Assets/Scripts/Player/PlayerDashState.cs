@@ -17,8 +17,8 @@ public class PlayerDashState : State
     public override void OnEnter()
     {
         base.OnEnter();
-        canDash = true;
-        playerManager.StartCoroutine(ieDash());
+        if (canDash) playerManager.StartCoroutine(ieDash());
+        else playerManager.SwitchToState(typeof(PlayerMoveState));
     }
 
     public override void OnUpdate()
@@ -29,16 +29,17 @@ public class PlayerDashState : State
     public override void OnExit()
     {
         base.OnExit();
-        canDash = false;
     }
 
     private IEnumerator ieDash()
     {
+        canDash = false;
         var _dashDirection = InputManager.Instance.Inputs.Player.Movement.ReadValue<Vector2>();
         var _dashDistanceVector = _dashDirection * playerManager.DashDistance;
         playerManager.PlayerRigid.AddForce(_dashDistanceVector, ForceMode2D.Impulse);
         yield return new WaitForSeconds(playerManager.DashDuration);
         playerManager.SwitchToState(typeof(PlayerMoveState));
         yield return new WaitForSeconds(playerManager.DashCooldown);
+        canDash = true;
     }
 }
