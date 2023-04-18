@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29d1f12040af89e4f9f37761266538a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerRigid: {fileID: 1280411629}
+  <PlayerRigid>k__BackingField: {fileID: 1280411629}
   MoveSpeed: 5
   DashDistance: 1.5
   DashDuration: 0.075

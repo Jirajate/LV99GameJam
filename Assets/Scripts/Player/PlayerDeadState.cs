@@ -16,7 +16,7 @@ public class PlayerDeadState : State
     public override void OnEnter()
     {
         base.OnEnter();
-        InputManager.Instance.RemoveAllCallback();
+        playerManager.UnBindPlayerInputs();
         SceneLoader.Instance.ReloadScene();
     }
 

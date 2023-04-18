@@ -9,7 +9,6 @@ public class InputManager : Singleton<InputManager>
     {
         base.Init();
         Inputs = new CustomInput();
-        Inputs.Enable();
     }
 
     public void EnableInput()
@@ -20,11 +19,5 @@ public class InputManager : Singleton<InputManager>
     public void DisableInput()
     {
         Inputs.Disable();
-    }
-
-    public void RemoveAllCallback()
-    {
-        Inputs = new CustomInput();
-        EnableInput();
     }
 }
