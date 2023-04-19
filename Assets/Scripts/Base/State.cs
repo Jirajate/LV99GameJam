@@ -9,17 +9,22 @@ public abstract class State
         isInit = true;
     }
 
-    public virtual void OnEnter(StateMachine _stateMachine)
+    public virtual void OnEnter()
     {
 
     }
 
-    public virtual void OnUpdate(StateMachine _stateMachine)
+    public virtual void OnUpdate()
     {
 
     }
 
-    public virtual void OnCollisionEnter(StateMachine _stateMachine)
+    public virtual void OnExit()
+    {
+
+    }
+
+    public virtual void OnTriggerEnter2D(Collider2D _other)
     {
 
     }

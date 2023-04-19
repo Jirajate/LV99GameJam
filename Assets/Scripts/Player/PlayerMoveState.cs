@@ -5,25 +5,39 @@ using UnityEngine.InputSystem;
 
 public class PlayerMoveState : State
 {
+    private PlayerManager playerManager;
     private Vector2 moveVector;
+    private Quaternion targetRotation = Quaternion.identity;
 
     public override void Init(StateMachine _stateMachine)
     {
         base.Init(_stateMachine);
+        playerManager = _stateMachine as PlayerManager;
         InputManager.Instance.Inputs.Player.Movement.performed += OnMovementPerformed;
         InputManager.Instance.Inputs.Player.Movement.canceled += OnMovementPerformed;
     }
 
-    public override void OnEnter(StateMachine _stateMachine)
+    public override void OnEnter()
     {
-        base.OnEnter(_stateMachine);
+        base.OnEnter();
     }
 
-    public override void OnUpdate(StateMachine _stateMachine)
+    public override void OnUpdate()
     {
-        base.OnUpdate(_stateMachine);
-        MovePlayer(_stateMachine);
-        if (Input.GetKeyDown(KeyCode.Space)) _stateMachine.SwitchToState(typeof(PlayerDashState));
+        base.OnUpdate();
+        RotatePlayer();
+        MovePlayer();
+    }
+
+    public override void OnExit()
+    {
+        base.OnExit();
+        playerManager.PlayerRigid.velocity = Vector2.zero;
+    }
+
+    public override void OnTriggerEnter2D(Collider2D _other)
+    {
+        playerManager.SwitchToState(typeof(PlayerDeadState));
     }
 
     private void OnMovementPerformed(InputAction.CallbackContext _value)
@@ -36,9 +50,18 @@ public class PlayerMoveState : State
         moveVector = Vector2.zero;
     }
 
-    private void MovePlayer(StateMachine _stateMachine)
+    private void MovePlayer()
     {
-        var _playerManager = _stateMachine as PlayerManager;
-        _playerManager.PlayerRigid.velocity = Vector3.Lerp(_playerManager.PlayerRigid.velocity, moveVector * _playerManager.MoveSpeed, Time.deltaTime * _playerManager.SmoothValue);
+        var _rigidBody = playerManager.PlayerRigid;
+        var _smoothValue = playerManager.SmoothValue * Time.deltaTime;
+        _rigidBody.velocity = Vector3.Lerp(_rigidBody.velocity, moveVector * playerManager.MoveSpeed, _smoothValue);
+    }
+
+    private void RotatePlayer()
+    {
+        var _rigidBody = playerManager.PlayerRigid;
+        var _smoothValue = playerManager.SmoothValue * Time.deltaTime;
+        if (moveVector.magnitude != 0) targetRotation = Quaternion.LookRotation(Vector3.forward, moveVector);
+        _rigidBody.transform.rotation = Quaternion.Lerp(_rigidBody.transform.rotation, targetRotation, _smoothValue);
     }
 }

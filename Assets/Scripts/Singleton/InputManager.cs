@@ -21,4 +21,10 @@ public class InputManager : Singleton<InputManager>
     {
         Inputs.Disable();
     }
+
+    public void RemoveAllCallback()
+    {
+        Inputs = new CustomInput();
+        EnableInput();
+    }
 }
