@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 181.63333333333333
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 375300149451076473}
     m_Duration: 26.916666666666686
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 181.63333333333333
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -7791914236573292197}
     m_Duration: 13.366666666666674
@@ -219,11 +219,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 7.215569633555901
-    m_PreExtrapolationTime: 181.63333333333333
+    m_PostExtrapolationTime: 7.21556963355593
+    m_PreExtrapolationTime: 0
     m_DisplayName: 05_transform
   - m_Version: 1
-    m_Start: 202.2155696335559
+    m_Start: 20.582236300222604
     m_ClipIn: 0
     m_Asset: {fileID: 963649621783902822}
     m_Duration: 4.680155239378422
@@ -288,11 +288,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 0.3042751270656652
+    m_PostExtrapolationTime: 0.30427512706563675
     m_PreExtrapolationTime: 0
     m_DisplayName: 05_2_laserLeft
   - m_Version: 1
-    m_Start: 207.2
+    m_Start: 25.566666666666663
     m_ClipIn: 0
     m_Asset: {fileID: 8724079438795277314}
     m_Duration: 4.680155239378422
@@ -403,9 +403,9 @@ MonoBehaviour:
   m_Clips:
   - m_Version: 1
     m_Start: 0
-    m_ClipIn: 0
+    m_ClipIn: 181.63333333333333
     m_Asset: {fileID: -2818786866205900122}
-    m_Duration: 224.70530612244897
+    m_Duration: 43.07197278911565
     m_TimeScale: 1
     m_ParentTrack: {fileID: -761732040303689474}
     m_EaseInDuration: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Children: []
   m_Clips:
   - m_Version: 1
-    m_Start: 181.63333333333333
+    m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: 8287100243805325615}
     m_Duration: 43.07197278911565
