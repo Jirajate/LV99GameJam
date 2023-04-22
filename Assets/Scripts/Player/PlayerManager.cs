@@ -12,6 +12,7 @@ public class PlayerManager : StateMachine
     public float DashDuration = 0.2f;
     public float DashCooldown = 0.2f;
     public float SmoothValue = 10f;
+    public Color ReloadSceneColor;
 
     private void Awake()
     {

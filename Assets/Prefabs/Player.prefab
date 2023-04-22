@@ -177,3 +177,4 @@ MonoBehaviour:
   DashDuration: 0.075
   DashCooldown: 0.1
   SmoothValue: 15
+  ReloadSceneColor: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}

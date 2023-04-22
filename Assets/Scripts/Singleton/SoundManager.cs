@@ -25,7 +25,7 @@ public class SoundManager : Singleton<SoundManager>
     public void Play(AudioClip _audioClip, float _volume = 0.5f)
     {
         audioSource.clip = _audioClip;
-        audioSource.volume = _volume;
+        audioSource.volume = _volume * OptionManager.Instance.BGMVolume;
         audioSource.Play();
     }
 }
