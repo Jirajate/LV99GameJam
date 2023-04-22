@@ -16,7 +16,9 @@ public class PlayerDeadState : State
     public override void OnEnter()
     {
         base.OnEnter();
-        InputManager.Instance.RemoveAllCallback();
+        playerManager.UnBindPlayerInputs();
+        TransitionManager.Instance.SetFadeDuration(0.2f);
+        TransitionManager.Instance.SetFadeColor(playerManager.ReloadSceneColor);
         SceneLoader.Instance.ReloadScene();
     }
 

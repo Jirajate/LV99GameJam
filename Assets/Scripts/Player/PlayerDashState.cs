@@ -12,13 +12,13 @@ public class PlayerDashState : State
     {
         base.Init(_stateMachine);
         playerManager = _stateMachine as PlayerManager;
-        InputManager.Instance.Inputs.Player.Dash.performed += OnDashPerformed;
     }
 
     public override void OnEnter()
     {
         base.OnEnter();
-        playerManager.StartCoroutine(ieDash());
+        if (canDash) playerManager.StartCoroutine(ieDash());
+        else playerManager.SwitchToState(typeof(PlayerMoveState));
     }
 
     public override void OnUpdate()
@@ -29,13 +29,6 @@ public class PlayerDashState : State
     public override void OnExit()
     {
         base.OnExit();
-        InputManager.Instance.Inputs.Player.Dash.performed -= OnDashPerformed;
-    }
-
-    private void OnDashPerformed(InputAction.CallbackContext _value)
-    {
-        if (!canDash) return;
-        playerManager.SwitchToState(typeof(PlayerDashState));
     }
 
     private IEnumerator ieDash()

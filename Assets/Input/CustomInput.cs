@@ -160,7 +160,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Gamepad Left Stick"",
                     ""id"": ""42f31927-da4d-44a6-b0be-a14b0fdd2036"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -215,7 +215,7 @@ public partial class @CustomInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Gamepad D-Pad"",
                     ""id"": ""c9254f89-d0de-4eb6-b43e-a76b01227a79"",
-                    ""path"": ""2DVector(mode=2)"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
