@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerManager : StateMachine
 {
@@ -12,10 +13,12 @@ public class PlayerManager : StateMachine
     public float DashDuration = 0.2f;
     public float DashCooldown = 0.2f;
     public float SmoothValue = 10f;
-    public Color ReloadSceneColor;
+
+    [SerializeField] private Button backButton;
 
     private void Awake()
     {
+        backButton.onClick.AddListener(BacktoMenu);
         AddState(typeof(PlayerMoveState), new PlayerMoveState());
         AddState(typeof(PlayerDashState), new PlayerDashState());
         AddState(typeof(PlayerDeadState), new PlayerDeadState());
@@ -25,9 +28,9 @@ public class PlayerManager : StateMachine
     public override void Init()
     {
         base.Init();
-        SoundManager.Instance.PlayGameplayBGM();
         BindPlayerInputs();
         SwitchToState(typeof(PlayerMoveState));
+        StartCoroutine(ieStartGame());
     }
 
     private void Update()
@@ -38,6 +41,13 @@ public class PlayerManager : StateMachine
     private void OnTriggerEnter2D(Collider2D _other)
     {
         currentState.OnTriggerEnter2D(_other);
+    }
+
+    private IEnumerator ieStartGame()
+    {
+        SoundManager.Instance.PlayGameplayBGM();
+        yield return new WaitForSeconds(SoundManager.Instance.GameplayBGM.length);
+        EndGame();
     }
 
     #region Input Binding
@@ -51,6 +61,7 @@ public class PlayerManager : StateMachine
 
     public void UnBindPlayerInputs()
     {
+        MoveVector = Vector2.zero;
         InputManager.Instance.Inputs.Player.Movement.performed -= OnMovementPerformed;
         InputManager.Instance.Inputs.Player.Movement.canceled -= OnMovementCancelled;
         InputManager.Instance.Inputs.Player.Dash.performed -= OnDashPerformed;
@@ -69,6 +80,18 @@ public class PlayerManager : StateMachine
     private void OnDashPerformed(InputAction.CallbackContext _value)
     {
         SwitchToState(typeof(PlayerDashState));
+    }
+
+    private void EndGame()
+    {
+        UnBindPlayerInputs();
+        SceneLoader.Instance.LoadEndGameScene();
+    }
+
+    private void BacktoMenu()
+    {
+        UnBindPlayerInputs();
+        SceneLoader.Instance.LoadMenuScene();
     }
     #endregion
 }

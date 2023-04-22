@@ -17,8 +17,6 @@ public class PlayerDeadState : State
     {
         base.OnEnter();
         playerManager.UnBindPlayerInputs();
-        TransitionManager.Instance.SetFadeDuration(0.2f);
-        TransitionManager.Instance.SetFadeColor(playerManager.ReloadSceneColor);
         SceneLoader.Instance.ReloadScene();
     }
 
