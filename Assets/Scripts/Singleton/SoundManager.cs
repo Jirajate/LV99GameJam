@@ -2,30 +2,35 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
-    private AudioSource audioSource;
-    private AudioClip gameplayBGM;
+    public AudioSource AudioSource;
+    public AudioClip GameplayBGM;
 
     public override void Init()
     {
         base.Init();
-        audioSource = gameObject.AddComponent<AudioSource>();
-        gameplayBGM = Resources.Load<AudioClip>("Sound/GameplayBGM");
+        AudioSource = gameObject.AddComponent<AudioSource>();
+        GameplayBGM = Resources.Load<AudioClip>("Sound/GameplayBGM");
     }
 
     public void PlayMenuBGM()
     {
-        Play(gameplayBGM);
+        Play(GameplayBGM);
     }
 
-    public void PlayGameplayBGM()
+    public void PlayGameplayBGM(float _volume = 0.3f)
     {
-        Play(gameplayBGM);
+        Play(GameplayBGM, _volume);
     }
 
     public void Play(AudioClip _audioClip, float _volume = 0.5f)
     {
-        audioSource.clip = _audioClip;
-        audioSource.volume = _volume * OptionManager.Instance.BGMVolume;
-        audioSource.Play();
+        AudioSource.clip = _audioClip;
+        AudioSource.volume = _volume * OptionManager.Instance.BGMVolume;
+        AudioSource.Play();
+    }
+
+    public void StopBGM()
+    {
+        AudioSource.Stop();
     }
 }

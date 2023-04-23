@@ -9,8 +9,6 @@ public class MainMenuUI : BaseUI
     [SerializeField] private Button exitButton;
     [SerializeField] private Slider bgmSlider;
     [SerializeField] private TextMeshProUGUI bgmText;
-    [SerializeField] float startGameFadeDuration = 0.35f;
-    [SerializeField] float exitGameFadeDuration = 0.35f;
 
     private void Awake()
     {
@@ -27,14 +25,11 @@ public class MainMenuUI : BaseUI
 
     private void StartGame()
     {
-        TransitionManager.Instance.SetFadeDuration(startGameFadeDuration);
-        TransitionManager.Instance.SetFadeColor(Color.black);
         SceneLoader.Instance.LoadGameplayScene();
     }
 
     private void ExitGame()
     {
-        TransitionManager.Instance.SetFadeDuration(exitGameFadeDuration);
         SceneLoader.Instance.ExitGame();
     }
 
