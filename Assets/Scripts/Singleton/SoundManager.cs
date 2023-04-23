@@ -22,7 +22,7 @@ public class SoundManager : Singleton<SoundManager>
         Play(GameplayBGM, _volume);
     }
 
-    public void Play(AudioClip _audioClip, float _volume = 0.5f)
+    public void Play(AudioClip _audioClip, float _volume = 0.3f)
     {
         AudioSource.clip = _audioClip;
         AudioSource.volume = _volume * OptionManager.Instance.BGMVolume;
