@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &39319015 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4252457537810357731, guid: 47361a2375a1ab84793db124f7af39fd, type: 3}
+  m_PrefabInstance: {fileID: 7188739072807107329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1230696244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,7 +425,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9039958944144961669, guid: 616450326e544c044a53ad66493c037f, type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 39319015}
+    - target: {fileID: 9039958944144961669, guid: 616450326e544c044a53ad66493c037f, type: 3}
+      propertyPath: m_LookAt
+      value: 
+      objectReference: {fileID: 39319015}
+    m_RemovedComponents:
+    - {fileID: 3203330754754767165, guid: 616450326e544c044a53ad66493c037f, type: 3}
+    - {fileID: 4757041936688030171, guid: 616450326e544c044a53ad66493c037f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
