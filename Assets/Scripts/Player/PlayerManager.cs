@@ -15,6 +15,7 @@ public class PlayerManager : StateMachine
     public float SmoothValue = 10f;
 
     [SerializeField] private Button backButton;
+    private bool isHitByParticle = false;
 
     private void Awake()
     {
@@ -41,6 +42,13 @@ public class PlayerManager : StateMachine
     private void OnTriggerEnter2D(Collider2D _other)
     {
         currentState.OnTriggerEnter2D(_other);
+    }
+
+    private void OnParticleCollision(GameObject _other)
+    {
+        if (isHitByParticle) return;
+        isHitByParticle = true;
+        currentState.OnTriggerEnter2D(null);
     }
 
     private IEnumerator ieStartGame()
