@@ -21,6 +21,11 @@ public class PlayerDashState : State
         else playerManager.SwitchToState(typeof(PlayerMoveState));
     }
 
+    public override void OnTriggerEnter2D(Collider2D _other)
+    {
+        playerManager.SwitchToState(typeof(PlayerDeadState));
+    }
+
     public override void OnUpdate()
     {
         base.OnUpdate();
