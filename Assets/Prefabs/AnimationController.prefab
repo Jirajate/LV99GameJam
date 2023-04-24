@@ -113,13 +113,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7595680461519889718}
-  - {fileID: 3056713042320670382}
+  - {fileID: 3305951279937673542}
   - {fileID: 2545869649423154217}
   - {fileID: 1315511300791663249}
   - {fileID: 5899138002885356493}
   - {fileID: 1029809956809587137}
   - {fileID: 7898314034182762093}
-  - {fileID: 8196412499150136216}
+  - {fileID: 8517776670392255612}
   m_Father: {fileID: 1466943686028289243}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -42151,7 +42151,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.48, y: 2.1}
+  m_Size: {x: 8.4, y: 2.05}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -42194,7 +42194,7 @@ PolygonCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.12198668, y: 0.52366596}
     oldSize: {x: 8.4, y: 2.05}
-    newSize: {x: 8.48, y: 2.1}
+    newSize: {x: 8.4, y: 2.05}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -43218,11 +43218,11 @@ PlayableDirector:
     value: {fileID: 9044607697980192495}
   - key: {fileID: -7000890026021566981, guid: 1eadc29c280bcdf4699c430173646aa7, type: 2}
     value: {fileID: 5910226136728528079}
-  - key: {fileID: -7036151529252012946, guid: 1eadc29c280bcdf4699c430173646aa7, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: -4570777520660686846, guid: 1eadc29c280bcdf4699c430173646aa7, type: 2}
     value: {fileID: 1656246027632499000}
-  - key: {fileID: 3514149633315226108, guid: 1eadc29c280bcdf4699c430173646aa7, type: 2}
+  - key: {fileID: 0}
     value: {fileID: 0}
   - key: {fileID: -5918458709122322735, guid: 1eadc29c280bcdf4699c430173646aa7, type: 2}
     value: {fileID: 2370574964012308445}
@@ -43971,7 +43971,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c2669154033c945bc1659cd45b4582, type: 3}
---- !u!4 &3056713042320670382 stripped
+--- !u!4 &3305951279937673542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42c2669154033c945bc1659cd45b4582, type: 3}
   m_PrefabInstance: {fileID: 3056713042320670381}
@@ -44235,7 +44235,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42c2669154033c945bc1659cd45b4582, type: 3}
---- !u!4 &8196412499150136216 stripped
+--- !u!4 &8517776670392255612 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 42c2669154033c945bc1659cd45b4582, type: 3}
   m_PrefabInstance: {fileID: 8196412499150136215}
