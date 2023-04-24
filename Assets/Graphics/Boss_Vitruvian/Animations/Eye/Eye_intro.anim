@@ -84,7 +84,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: 
+    path: Eye_display
   m_ScaleCurves: []
   m_FloatCurves:
   - serializedVersion: 2
@@ -110,7 +110,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 2.5
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -119,17 +119,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 3
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -138,7 +129,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 10
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -149,7 +140,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_03
+    path: Eye_display/eyes_animate_01
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -215,7 +206,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_02
+    path: Eye_display/eyes_animate_02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -242,8 +233,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2.5
+        time: 1.5
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -252,7 +252,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 3
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -261,7 +261,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 10
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -272,7 +272,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_01
+    path: Eye_display/eyes_animate_03
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -329,7 +329,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_04
+    path: Eye_display/eyes_animate_04
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -342,7 +342,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 3448447567
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -351,7 +351,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 36218693
+      path: 1489800350
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -360,7 +360,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1966053331
+      path: 3250969892
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -369,7 +369,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3961964137
+      path: 3066228146
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -378,7 +378,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2622239462
+      path: 681998353
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -479,7 +479,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: 
+    path: Eye_display
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -554,7 +554,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: 
+    path: Eye_display
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -629,7 +629,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: 
+    path: Eye_display
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -656,7 +656,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 2.5
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -665,17 +665,8 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
         time: 3
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -684,7 +675,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 10
-        value: 0
+        value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -695,7 +686,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_03
+    path: Eye_display/eyes_animate_01
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -761,7 +752,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_02
+    path: Eye_display/eyes_animate_02
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -788,8 +779,17 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 2.5
+        time: 1.5
         value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 2
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -798,7 +798,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 3
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -807,7 +807,7 @@ AnimationClip:
         outWeight: 0
       - serializedVersion: 3
         time: 10
-        value: 1
+        value: 0
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
@@ -818,7 +818,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_01
+    path: Eye_display/eyes_animate_03
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -875,11 +875,11 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: eyes_animate_04
+    path: Eye_display/eyes_animate_04
     classID: 1
     script: {fileID: 0}
     flags: 0
   m_EulerEditorCurves: []
-  m_HasGenericRootTransform: 1
+  m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
