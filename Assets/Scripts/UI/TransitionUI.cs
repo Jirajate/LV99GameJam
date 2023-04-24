@@ -23,13 +23,16 @@ public class TransitionUI : MonoBehaviour
     public void FadeIn(float _duration, Action _onComplete = null)
     {
         canvasGroup.blocksRaycasts = true;
-        canvasGroup.DOFade(1, _duration);
-        _onComplete?.Invoke();
+        canvasGroup.DOFade(1, _duration).OnComplete(() => _onComplete?.Invoke());
     }
 
     public void FadeOut(float _duration, Action _onComplete = null)
     {
-        canvasGroup.DOFade(0, _duration).OnComplete(() => canvasGroup.blocksRaycasts = false);
-        _onComplete?.Invoke();
+        canvasGroup.DOFade(0, _duration).OnComplete(
+            () =>
+            {
+                canvasGroup.blocksRaycasts = false;
+                _onComplete?.Invoke();
+            });
     }
 }

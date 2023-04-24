@@ -20,6 +20,7 @@ public class MainMenuUI : BaseUI
         SoundManager.Instance.Init();
         SceneLoader.Instance.Init();
         TransitionManager.Instance.Init();
+        SoundManager.Instance.PlayMenuBGM();
         UpdateBGMSlider(OptionManager.Instance.BGMVolume);
     }
 

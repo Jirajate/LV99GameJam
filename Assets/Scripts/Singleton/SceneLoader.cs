@@ -47,10 +47,11 @@ public class SceneLoader : Singleton<SceneLoader>
     private IEnumerator ieLoadScene(string _sceneName)
     {
         TransitionManager.Instance.FadeIn();
+        SoundManager.Instance.FadeOutAudio(TransitionManager.Instance.FadeDuration);
         yield return new WaitForSeconds(TransitionManager.Instance.FadeDuration);
-        SoundManager.Instance.StopBGM();
         SceneManager.LoadScene(_sceneName);
         currentScene = _sceneName;
+        SoundManager.Instance.FadeInAudio(TransitionManager.Instance.FadeDuration);
         TransitionManager.Instance.FadeOut();
     }
 
@@ -65,6 +66,8 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         TransitionManager.Instance.SetFadeColor(Color.black);
         TransitionManager.Instance.SetFadeDuration(exitGameFadeDuration);
-        TransitionManager.Instance.FadeIn(() => Application.Quit());
+        TransitionManager.Instance.FadeIn(Application.Quit);
+        SoundManager.Instance.FadeOutAudio(TransitionManager.Instance.FadeDuration);
     }
+
 }

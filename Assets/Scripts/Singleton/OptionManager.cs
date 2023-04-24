@@ -12,14 +12,10 @@ public class OptionManager : Singleton<OptionManager>
         if (PlayerPrefs.HasKey("bgm")) BGMVolume = PlayerPrefs.GetFloat("bgm");
     }
 
-    private void Update()
-    {
-        Debug.Log(BGMVolume);
-    }
-
     public void ChangeBGMVolume(float _value)
     {
         BGMVolume = _value;
+        SoundManager.Instance.UpdateAudioVolume(_value);
         PlayerPrefs.SetFloat("bgm", _value);
     }
 }

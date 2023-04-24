@@ -13,6 +13,7 @@ public class EndGameUI : MonoBehaviour
 
     private IEnumerator ieShowCredit()
     {
+        SoundManager.Instance.PlayMenuBGM();
         yield return new WaitForSeconds(duration);
         SceneLoader.Instance.LoadMenuScene();
     }
